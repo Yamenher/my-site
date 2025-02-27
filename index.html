@@ -23,6 +23,9 @@
       --mdui-color-primary-container: 27 94 32;
       --mdui-color-on-primary-container: 200 230 201;
       --mdui-color-secondary: 102 187 106;
+      --mdui-color-on-secondary: 255 255 255;
+      --mdui-color-tertiary: 77 182 172;
+      --mdui-color-on-tertiary: 0 77 64;
       --mdui-color-background: 18 24 20;
       --mdui-color-on-background: 224 242 228;
       --mdui-color-surface: 23 29 25;
@@ -79,17 +82,17 @@
 
   <!-- Top App Bar -->
   <mdui-top-app-bar>
-    <mdui-button-icon icon="menu" onclick="mdui.drawer.toggle('#drawer')"></mdui-button-icon>
+    <mdui-button-icon icon="menu" onclick="toggleDrawer()"></mdui-button-icon>
     <mdui-top-app-bar-title>Yamen Hermassi</mdui-top-app-bar-title>
   </mdui-top-app-bar>
 
   <!-- Sidebar Navigation -->
   <mdui-drawer id="drawer">
     <mdui-list>
-      <mdui-list-item icon="home">Home</mdui-list-item>
-      <mdui-list-item icon="person">About Me</mdui-list-item>
-      <mdui-list-item icon="work">Projects</mdui-list-item>
-      <mdui-list-item icon="email">Contact</mdui-list-item>
+      <mdui-list-item icon="home" onclick="closeDrawer()">Home</mdui-list-item>
+      <mdui-list-item icon="person" onclick="closeDrawer()">About Me</mdui-list-item>
+      <mdui-list-item icon="work" onclick="closeDrawer()">Projects</mdui-list-item>
+      <mdui-list-item icon="email" onclick="closeDrawer()">Contact</mdui-list-item>
     </mdui-list>
   </mdui-drawer>
 
@@ -133,37 +136,4 @@
             <p>APK/AAB signing tool with v1, v2, v3, v4 support.</p>
           </mdui-list-item-content>
         </mdui-list-item>
-      </mdui-card>
-
-      <mdui-card variant="outlined" style="padding: 16px;">
-        <mdui-list-item icon="code">
-          <mdui-list-item-content>
-            <h5>Sparkles Editor</h5>
-            <p>Advanced code editor with syntax highlighting.</p>
-          </mdui-list-item-content>
-        </mdui-list-item>
-      </mdui-card>
-
-      <mdui-card variant="outlined" style="padding: 16px;">
-        <mdui-list-item icon="settings">
-          <mdui-list-item-content>
-            <h5>FFmpeg Playground</h5>
-            <p>Media processing toolkit with advanced controls.</p>
-          </mdui-list-item-content>
-        </mdui-list-item>
-      </mdui-card>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-      &copy; 2025 Yamen Hermassi. All rights reserved.  
-      <br><br>
-      <mdui-button-icon icon="github"></mdui-button-icon>
-      <mdui-button-icon icon="linkedin"></mdui-button-icon>
-      <mdui-button-icon icon="email"></mdui-button-icon>
-    </div>
-
-  </div>
-
-</body>
-</html>
+      </mdui-card
