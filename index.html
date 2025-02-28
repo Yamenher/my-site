@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
 <html lang="en" class="mdui-theme-dark">
 <head>
   <meta charset="UTF-8">
@@ -17,26 +17,59 @@
 
   <style>
     :root {
-      --mdui-color-primary: 56 142 60; /* Material Green */
-      --mdui-color-surface-tint: 56 142 60;
-      --mdui-color-on-primary: 255 255 255;
-      --mdui-color-primary-container: 27 94 32;
-      --mdui-color-on-primary-container: 200 230 201;
-      --mdui-color-secondary: 102 187 106;
-      --mdui-color-on-secondary: 255 255 255;
-      --mdui-color-tertiary: 77 182 172;
-      --mdui-color-on-tertiary: 0 77 64;
-      --mdui-color-background: 18 24 20;
-      --mdui-color-on-background: 224 242 228;
-      --mdui-color-surface: 23 29 25;
-      --mdui-color-on-surface: 224 242 228;
-      --mdui-color-outline: 130 200 140;
+      --mdui-color-primary: 122, 221, 101;
+        --mdui-color-surface-tint: 122, 221, 101;
+        --mdui-color-on-primary: 1, 58, 0;
+        --mdui-color-primary-container: 6, 117, 1;
+        --mdui-color-on-primary-container: 149, 249, 125;
+        --mdui-color-secondary: 167, 210, 151;
+        --mdui-color-on-secondary: 19, 56, 13;
+        --mdui-color-secondary-container: 44, 82, 36;
+        --mdui-color-on-secondary-container: 153, 196, 138;
+        --mdui-color-tertiary: 151, 203, 255;
+        --mdui-color-on-tertiary: 0, 51, 83;
+        --mdui-color-tertiary-container: 0, 105, 165;
+        --mdui-color-on-tertiary-container: 206, 228, 255;
+        --mdui-color-error: 255, 180, 171;
+        --mdui-color-on-error: 105, 0, 5;
+        --mdui-color-error-container: 147, 0, 10;
+        --mdui-color-on-error-container: 255, 218, 214;
+        --mdui-color-background: 15, 21, 13;
+        --mdui-color-on-background: 222, 229, 215;
+        --mdui-color-surface: 15, 21, 13;
+        --mdui-color-on-surface: 222, 229, 215;
+        --mdui-color-surface-variant: 63, 74, 59;
+        --mdui-color-on-surface-variant: 191, 202, 182;
+        --mdui-color-outline: 137, 148, 130;
+        --mdui-color-outline-variant: 63, 74, 59;
+        --mdui-color-shadow: 0, 0, 0;
+        --mdui-color-scrim: 0, 0, 0;
+        --mdui-color-inverse-surface: 222, 229, 215;
+        --mdui-color-inverse-on-surface: 44, 50, 41;
+        --mdui-color-inverse-primary: 4, 110, 0;
+        --mdui-color-primary-fixed: 149, 250, 126;
+        --mdui-color-on-primary-fixed: 0, 34, 0;
+        --mdui-color-primary-fixed-dim: 122, 221, 101;
+        --mdui-color-on-primary-fixed-variant: 2, 83, 0;
+        --mdui-color-secondary-fixed: 194, 239, 177;
+        --mdui-color-on-secondary-fixed: 0, 34, 0;
+        --mdui-color-secondary-fixed-dim: 167, 210, 151;
+        --mdui-color-on-secondary-fixed-variant: 42, 79, 34;
+        --mdui-color-tertiary-fixed: 206, 229, 255;
+        --mdui-color-on-tertiary-fixed: 0, 29, 51;
+        --mdui-color-tertiary-fixed-dim: 151, 203, 255;
+        --mdui-color-on-tertiary-fixed-variant: 0, 74, 119;
+        --mdui-color-surface-dim: 15, 21, 13;
+        --mdui-color-surface-bright: 53, 59, 49;
+        --mdui-color-surface-container-lowest: 10, 16, 8;
+        --mdui-color-surface-container-low: 23, 29, 21;
+        --mdui-color-surface-container: 27, 33, 25;
+        --mdui-color-surface-container-high: 38, 44, 35;
+        --mdui-color-surface-container-highest: 48, 55, 45;
     }
 
     body {
       font-family: 'Outfit', sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
     .container {
@@ -45,79 +78,102 @@
       padding: 20px;
     }
 
-    .drawer-icon {
-      color: rgb(var(--mdui-color-primary)) !important;
+    .profile-picture {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 16px;
+      display: block;
     }
 
     .about-card {
-      background-color: rgb(var(--mdui-color-primary-container));
-      color: rgb(var(--mdui-color-on-primary-container));
+      background-color: rgb(var(--mdui-color-surface-container));
+      color: rgb(var(--mdui-color-on-surface));
       padding: 20px;
       border-radius: 16px;
+      text-align: left;
+      transition: transform 1s ease;
     }
 
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 16px;
+      margin-top: 16px;
+    }
+
+    .project-card {
+      padding: 16px;
+      border: 1px solid rgba(var(--mdui-color-outline), 0.5);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 0.9rem;
+      color: rgb(var(--mdui-color-outline));
+      margin-top: 32px;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Top App Bar -->
   <mdui-top-app-bar>
-    <mdui-button-icon icon="menu" onclick="toggleDrawer()"></mdui-button-icon>
+    <mdui-button-icon icon="menu" id="menuButton"></mdui-button-icon>
     <mdui-top-app-bar-title>Yamen Hermassi</mdui-top-app-bar-title>
   </mdui-top-app-bar>
 
-  <!-- Sidebar Navigation -->
-  <mdui-drawer id="drawer">
+  <mdui-navigation-drawer close-on-overlay-click id="navDrawer">
     <mdui-list>
-      <mdui-list-item icon="home" class="drawer-icon" onclick="closeDrawer()">Home</mdui-list-item>
-      <mdui-list-item icon="person" class="drawer-icon" onclick="closeDrawer()">About Me</mdui-list-item>
-      <mdui-list-item icon="work" class="drawer-icon" onclick="closeDrawer()">Projects</mdui-list-item>
-      <mdui-list-item icon="email" class="drawer-icon" onclick="closeDrawer()">Contact</mdui-list-item>
+      <mdui-list-item rounded style="margin-left: 12px; margin-right: 12px; margin-top: 8px;" icon="person">About Me</mdui-list-item>
+      <mdui-list-item rounded style="margin-left: 12px; margin-right: 12px; margin-top: 8px;" icon="work">Projects</mdui-list-item>
+      <mdui-list-item rounded style="margin-left: 12px; margin-right: 12px; margin-top: 8px;"  icon="email">Contact</mdui-list-item>
     </mdui-list>
-  </mdui-drawer>
+  </mdui-navigation-drawer>
 
   <div class="container">
+    <img src="https://github.com/yamenher.png" alt="Yamen Hermassi" class="profile-picture">
 
-    <!-- About Me Card -->
     <mdui-card variant="elevated" class="about-card">
       <h3 class="mdui-typo-headline-small">About Me</h3>
       <p>
-        I'm an Android developer passionate about creating elegant and efficient mobile applications.  
-        My focus is on UI/UX design, optimizing app performance, and implementing robust security features.
+        I'm a 17yo Android developer passionate about creating elegant and efficient mobile applications.  
+        My focus is on UI/UX design, Utility apps creating, and making NodeJs based hostings (New Hobby).
       </p>
       <p>
         I specialize in Java and Material Design, always striving to build apps that offer a seamless experience.
       </p>
     </mdui-card>
 
-    <!-- Projects -->
     <h4 class="mdui-typo-headline-small" style="margin-top: 24px;">Projects</h4>
     <div class="projects">
-      <mdui-card variant="outlined" style="padding: 16px;">
-        <mdui-list-item icon="app_shortcut">
-          <mdui-list-item-content>
-            <h5>X-Signer</h5>
-            <p>APK/AAB signing tool with v1, v2, v3, v4 support.</p>
-          </mdui-list-item-content>
-        </mdui-list-item>
+      <mdui-card clickable class="project-card">
+        <h3>X-Signer</h3>
+        <p>APK/AAB signing tool with v1, v2, v3, v4 support.</p>
       </mdui-card>
     </div>
-
+    
+    <div class="footer">
+      &copy; 2025 Yamen Hermassi. All rights reserved.
+    </div>
   </div>
 
   <script>
-    function toggleDrawer() {
-      document.getElementById("drawer").toggle();
-    }
+    const menuButton = document.getElementById("menuButton");
+    const drawer = document.getElementById("navDrawer");
 
-    function closeDrawer() {
-      document.getElementById("drawer").close();
-    }
+    menuButton.addEventListener("click", () => {
+      drawer.open = !drawer.open;
+    });
   </script>
 
 </body>
